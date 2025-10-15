@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1f1f1f;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: aqua;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsive tweak: 
+The textarea should adapt to screen size gracefully */
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    /* need understanding */
+}
+
+.btn {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(37, 168, 168);
+    color: white;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+/* Cool hue rotation animation for button */
+
+.btn:hover {
+    animation: hueShift 4s linear infinite;
+    transform: translateY(-1.5px);
+}
+
+@keyframes hueShift {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Mobile Responsiveness
+Ensuring perfect alignment and spacing on smaller screens */
+
+@media (max-width: 600px) {
+    .contact {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+        gap: 10px;
+    }
+
+    .contact h2 {
+        font-size: 1.6rem;
+    }
+}
