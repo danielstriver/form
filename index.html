@@ -9,12 +9,15 @@
 <body>
     <section id="contact" class="contact">
         <h2>Let's Get In Touch</h2>
-        <form action="#" class="contact-form">
-            <input type="text" name="name" id="name" placeholder="Your Name" required>
-            <input type="email" name="email" id="email" placeholder="Your Email" required>
-            <textarea name="message" id="message" cols="20" rows="5" placeholder="Your Message" required></textarea>
-            <button class="btn">Send Message</button>
+        <form action="#" id="contact-form" class="contact-form">
+            <input type="text" name="name" id="name" placeholder="Your Name">
+            <input type="" name="email" id="email" placeholder="Your Email">
+            <textarea name="message" id="message" cols="20" rows="5" placeholder="Your Message"></textarea>
+            <button id="btn" class="btn">Send Message</button>
+            <!-- a div to hold success or error messages / form validation -->
+             <div id="form-status" class="form-status"></div>
         </form>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
